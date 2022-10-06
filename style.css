@@ -1,8 +1,8 @@
-*{
+* {
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: darkgray;
     display: flex;
     flex-direction: column;
@@ -35,18 +35,19 @@ main {
 }
 
 
-a{
-    text-decoration:none;
+a {
+    text-decoration: none;
     color: brown;
 }
 
 
-#sqr1{
+#sqr1 {
     background-color: coral;
     width: 50px;
     height: 50px;
 }
-#sqr2{
+
+#sqr2 {
     position: absolute;
     top: 500px;
     left: 50px;
@@ -54,7 +55,8 @@ a{
     width: 50px;
     height: 50px;
 }
-#sqr3{
+
+#sqr3 {
     position: fixed;
     top: 500px;
     right: 50px;
@@ -63,17 +65,18 @@ a{
     height: 50px;
 }
 
-@media screen and (max-width: 200px){
-    body{
+@media screen and (max-width: 200px) {
+    body {
         background-color: red;
     }
 }
-@media screen and (min-width: 200px) and (max-width: 500px){
-    body{
+
+@media screen and (min-width: 200px) and (max-width: 500px) {
+    body {
         background-color: blue;
     }
 
-    main{
+    main {
         width: 80%;
     }
 }
