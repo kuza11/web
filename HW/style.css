@@ -4,7 +4,7 @@
 
 body {
     margin: 0;
-    background-color: black;
+    background-color: #0F0F0F;
 }
 
 img {
@@ -82,17 +82,19 @@ a:visited {
 
 #right {
     margin-top: 25px;
-    width: 30%;
+    margin-bottom: 25px;
+    width: 35%;
     float: right;
     background-color: #D0D0D0;
-    margin-right: 29.5%;
+    margin-right: 26.5%;
     padding: 15px;
+
 }
 
 #header{
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 28px;
+    font-size: 32px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -102,12 +104,13 @@ a:visited {
     margin: 0;
     padding: 5%;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
 }
 
 ul {
     font-family: Georgia, 'Times New Roman', Times, serif;
     list-style-type: none;
-    width: 211px;
+    width: 218px;
     padding: 0;
     margin: 0;
 }
@@ -118,11 +121,22 @@ li {
     color: white;
     font-size: 48px;
     text-shadow: 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black;
-    padding-top: calc(50vh - 111px);
-    padding-bottom: calc(50vh - 111px);
-    padding-left: calc(50% - 77.35px);
+    /*padding-top: calc(50vh - 111px);
+    padding-bottom: calc(50vh - 111px);*/
+    padding-left: calc(50% - 82.92px);
 }
 
 footer {
-    color: white;
+    outline: 2px solid #D0D0D0;
+    color: black;
+    background-color: black;
+    text-shadow: 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white;
+    font-weight: bold;
+}
+.ftrtxt{
+    margin: 0;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    display: flex;
+    justify-content: center;
 }
