@@ -38,15 +38,23 @@
                 </div>
             </nav>
             <div id="cont">
-                <p id="header">
-                    The Best Converter, written in js of course.
-                </p>
-                <p id="text">
-                    Data conversion is the conversion of computer data from one format to another. Throughout a computer environment, data is encoded in a variety of ways. For example, computer hardware is built on the basis of certain standards, which requires that data contains, for example, parity bit checks. Similarly, the operating system is predicated on certain standards for data and file handling. Furthermore, each computer program handles data in a different manner. Whenever any one of these variables is changed, data must be converted in some way before it can be used by a different computer, operating system or program. Even different versions of these elements usually involve different data structures. For example, the changing of bits from one format to another, usually for the purpose of application interoperability or of the capability of using new features, is merely a data conversion. Data conversions may be as simple as the conversion of a text file from one character encoding system to another; or more complex, such as the conversion of office file formats, or the conversion of image formats and audio file formats.
-                    <br>
-                    <br>
-                    There are many ways in which data is converted within the computer environment. This may be seamless, as in the case of upgrading to a newer version of a computer program. Alternatively, the conversion may require processing by the use of a special conversion program, or it may involve a complex process of going through intermediary stages, or involving complex "exporting" and "importing" procedures, which may include converting to and from a tab-delimited or comma-separated text file. In some cases, a program may recognize several data file formats at the data input stage and then is also capable of storing the output data in several different formats. Such a program may be used to convert a file format. If the source format or target format is not recognized, then at times a third program may be available which permits the conversion to an intermediate format, which can then be reformatted using the first program. There are many possible scenarios.
-                </p>
+                <textarea id="textA" placeholder="Input dec number"></textarea>
+                <div id="contIn">
+                    <div id="buttnCont">
+                        <p class="btnT">DEC</p>
+                        <button type="button" name="bttnC">
+                            <img id="CIco" src="../convert-icon.png" alt="convIco" width="64" height="64">
+                        </button>
+                        <p class="btnT">ASCII</p>
+                    </div>
+                    <div id="switch">
+                        <button id="SwBt" type="button" name="bttnS">
+                            <img src="../switch.png" alt="swtchIco" width="40" height="40">
+                            <p id="swtchT">Switch<br>Values</p>
+                        </button>
+                    </div>
+                </div>
+                <div id="output"></div>
             </div>
             <footer>
                 <p class="ftrtxt">MyConvert ©</p>
