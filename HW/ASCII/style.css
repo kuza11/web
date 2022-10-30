@@ -11,7 +11,6 @@ body {
 #container {
     display: grid;
     grid-template-columns: [c1] 8rem [split] 8rem [c2] auto [end];
-    /*10vw [line3] auto [line4] 10vw*/
     grid-template-rows: [r1] 8rem [r2] calc(20vh - 8rem) [r3] 60vh [r4] calc(20vh - 8rem) [r5] 8rem [end];
 }
 
@@ -165,7 +164,7 @@ button {
     background-color: #d9d9d9;
 }
 
-#switch{
+#switch {
     display: flex;
     flex-direction: row;
     grid-column-start: cii4;
@@ -174,14 +173,14 @@ button {
     justify-content: center;
 }
 
-#SwBt{
+#SwBt {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
 }
 
-#swtchT{
+#swtchT {
     margin: 0;
     font-family: sans-serif;
     font-weight: bold;

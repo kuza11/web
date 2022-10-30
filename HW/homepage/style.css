@@ -10,11 +10,11 @@ body {
 
 #container {
     display: grid;
-    grid-template-columns: [c1] 8rem [split] 8rem [c2] auto [end];/*10vw [line3] auto [line4] 10vw*/
+    grid-template-columns: [c1] 8rem [split] 8rem [c2] auto [end];
     grid-template-rows: [r1] 8rem [r2] calc(20vh - 8rem) [r3] 60vh [r4] calc(20vh - 8rem) [r5] 8rem [end];
 }
 
-#left{
+#left {
     grid-column-start: c1;
     grid-column-end: c2;
     grid-row-start: r2;
@@ -35,7 +35,8 @@ nav {
     padding: 5px;
 
 }
-#logo{
+
+#logo {
     grid-column-start: split;
     grid-column-end: c2;
     grid-row-start: r1;
@@ -62,7 +63,7 @@ nav {
     margin: 0;
 }
 
-#lref{
+#lref {
     text-decoration-color: #019ad6;
 }
 
@@ -81,6 +82,7 @@ a {
     color: white;
     text-decoration: none;
 }
+
 a:link {
     color: white;
     text-decoration: none;
@@ -92,11 +94,11 @@ a:visited {
     text-decoration: none;
 }
 
-a:hover{
+a:hover {
     text-decoration: underline;
 }
 
-#cont{
+#cont {
     grid-column-start: c2;
     grid-column-end: end;
     grid-row-start: r3;
@@ -106,14 +108,15 @@ a:hover{
     overflow: auto;
 }
 
-#header{
+#header {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 32px;
     padding-left: 3%;
     padding-right: 3%;
 }
-#text{
+
+#text {
     margin: 0;
     padding-top: 2%;
     padding-bottom: 2%;
@@ -151,7 +154,8 @@ footer {
     text-shadow: 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white;
     font-weight: bold;
 }
-.ftrtxt{
+
+.ftrtxt {
     margin: 0;
     padding-top: 1.8rem;
     display: flex;
