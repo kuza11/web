@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>MyConvert</title>
 
-        <meta charset="UTF-8">
-        <link href="style.css" rel="stylesheet">
-        <link rel="sc icon" href="../favicon.ico">
-    </head>
-    <body>
-        <div id="container">
-            <a href="../homepage/MC homepage.html">
-            <img src="../icon.png" alt="ico" width="134.4", height="128">
+<head>
+    <title>MyConvert</title>
+
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet">
+    <link rel="sc icon" href="../favicon.ico">
+</head>
+
+<body>
+    <div id="container">
+        <a href="../homepage/MC homepage.html">
+            <img src="../icon.png" alt="ico" width="134.4" , height="128">
             <div id="logo">
                 <a id="lref" href="../homepage/MC homepage.html">
                     <p id="green">My</p>
@@ -24,46 +26,48 @@
                         soon
                     </li>
                 </ul>
-                </a>
-            </div>
-            <nav>
-                <div class="nvb" class="convs">
-                    <a href="../ASCII/MC ASCII.html">ASCII</a>
-                </div>
-                <div class="nvb" class="convs">
-                    <a href="">UTF-8</a>
-                </div>
-                <div class="nvb" >
-                    <a href="">Numeral<br>Systems</a>
-                </div>
-            </nav>
-            <div id="cont">
-                <textarea id="textA" placeholder="Input dec number"></textarea>
-                <div id="contIn">
-                    <div id="buttnCont">
-                        <p class="btnT">DEC</p>
-                        <button type="button" name="bttnC">
-                            <img id="CIco" src="../convert-icon.png" alt="convIco" width="64" height="64">
-                        </button>
-                        <p class="btnT">ASCII</p>
-                    </div>
-                    <div id="switch">
-                        <button id="SwBt" type="button" name="bttnS">
-                            <img src="../switch.png" alt="swtchIco" width="40" height="40">
-                            <p id="swtchT">Switch<br>Values</p>
-                        </button>
-                    </div>
-                </div>
-                <div id="output"></div>
-            </div>
-            <footer>
-                <p class="ftrtxt">MyConvert ©</p>
-                <p class="ftrtxt">Jakub Zvolánek</p>
-            </footer>
+        </a>
+    </div>
+    <nav>
+        <div class="nvb" class="convs">
+            <a href="../ASCII/MC ASCII.html">ASCII</a>
         </div>
-        <script src="script.js"></script>
-        
-    </body>
-    
-    
+        <div class="nvb" class="convs">
+            <a href="">UTF-8</a>
+        </div>
+        <div class="nvb">
+            <a href="">Numeral<br>Systems</a>
+        </div>
+    </nav>
+    <div id="cont">
+        <textarea id="textA" placeholder="Input dec numbers seperated by space"></textarea>
+        <div id="contIn">
+            <div id="buttnCont">
+                <p class="btnT">DEC</p>
+                <button type="button" name="bttnC" onclick="conversion()">
+                    <img id="CIco" src="../convert-icon.png" alt="convIco" width="64" height="64">
+                </button>
+                <p class="btnT">ASCII</p>
+            </div>
+            <div id="switch">
+                <button id="SwBt" type="button" name="bttnS">
+                    <img src="../switch.png" alt="swtchIco" width="40" height="40">
+                    <p id="swtchT">Switch<br>Values</p>
+                </button>
+            </div>
+        </div>
+        <div id="output">
+            <p id="outputT"></p>
+        </div>
+    </div>
+    <footer>
+        <p class="ftrtxt">MyConvert ©</p>
+        <p class="ftrtxt">Jakub Zvolánek</p>
+    </footer>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+
 </html>
