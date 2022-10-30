@@ -13,12 +13,14 @@ function conversion() {
     document.getElementById("CIco").src = "../convert-icon-dark.png"
     document.getElementById("outputT").innerHTML = "";
     if (!switched) {
-        document.getElementById("textA").value.split(" ").forEach(e => {
+        document.getElementById("textA").value.trim().split(" ").filter(e => e != "").forEach(e => {
             try {
-                e.split("").forEach(num => {
+                e.trim().split("").forEach(num => {
                     if (Number.isNaN(parseInt(num))) throw "NaN";
                 });
-                e = parseInt(e);
+                console.log(e);
+                e = parseInt(e.trim());
+
                 if (Number.isNaN(e)) throw "NaN";
                 if (document.getElementById("outputT").innerHTML != "Invalid input!")
                     document.getElementById("outputT").innerHTML += " " + String(e);
