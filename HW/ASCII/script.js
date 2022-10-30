@@ -21,9 +21,9 @@ function conversion() {
                 console.log(e);
                 e = parseInt(e.trim());
 
-                if (Number.isNaN(e)) throw "NaN";
+                if (Number.isNaN(e) || e > 127) throw "invalid";
                 if (document.getElementById("outputT").innerHTML != "Invalid input!")
-                    document.getElementById("outputT").innerHTML += " " + String(e);
+                    document.getElementById("outputT").innerHTML += " " + String.fromCharCode(e);
             } catch (error) {
                 return document.getElementById("outputT").innerHTML = "Invalid input!";
             }
