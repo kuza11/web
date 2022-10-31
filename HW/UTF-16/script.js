@@ -10,22 +10,22 @@ setInterval(() => {
 }, 1);
 
 function conversion() {
-    document.getElementById("CIco").src = "../convert-icon-dark.png"
+    document.getElementById("CIco").src = "../convert-icon-dark.png";
     document.getElementById("outputT").innerHTML = "";
     if (!switched) {
-        document.getElementById("textA").value.trim().split(" ").filter(e => e != "").forEach(e => {
-            try {
+        try {
+            document.getElementById("textA").value.trim().split(" ").filter(e => e != "").forEach(e => {
                 e.trim().split("").forEach(num => {
                     if (Number.isNaN(parseInt(num))) throw "NaN";
                 });
                 e = parseInt(e.trim());
                 if (Number.isNaN(e)) throw "invalid";
-                if (document.getElementById("outputT").innerHTML != "Invalid input!");
                 document.getElementById("outputT").innerHTML += String.fromCharCode(e);
-            } catch (error) {
-                return document.getElementById("outputT").innerHTML = "Invalid input!";
-            }
-        });
+            
+            });
+        } catch{
+            return document.getElementById("outputT").innerHTML = "Invalid input!";
+        }
     } else {
         document.getElementById("textA").value.split("").forEach(e => {
             document.getElementById("outputT").innerHTML += " " + e.charCodeAt(0);
@@ -37,25 +37,29 @@ function conversion() {
 }
 
 function swtch() {
+    document.getElementById("SwBt").style.backgroundColor = "#c5c5c5";
+    document.getElementById("swtchI").src = "../switch-dark.png";
     if (!switched) {
-        document.getElementById("SwBt").style.backgroundColor = "#c5c5c5";
         document.getElementById("textA").placeholder = "Input text";
         let cont = document.getElementById("textA").value;
         document.getElementById("textA").value = document.getElementById("outputT").innerText;
         document.getElementById("outputT").innerHTML = cont;
+        document.getElementById("btnTL").innerHTML = "UTF-16";
+        document.getElementById("btnTR").innerHTML = "DEC";
         switched = true;
-        setTimeout(() => {
-            document.getElementById("SwBt").style.backgroundColor = "#d9d9d9";
-        }, 100);
+
     } else {
         document.getElementById("SwBt").style.backgroundColor = "#c5c5c5";
         document.getElementById("textA").placeholder = "Input dec numbers seperated by space";
         let cont = document.getElementById("textA").value;
         document.getElementById("textA").value = document.getElementById("outputT").innerText;
         document.getElementById("outputT").innerHTML = cont;
+        document.getElementById("btnTL").innerHTML = "DEC";
+        document.getElementById("btnTR").innerHTML = "UTF-16";
         switched = false;
-        setTimeout(() => {
-            document.getElementById("SwBt").style.backgroundColor = "#d9d9d9";
-        }, 100);
     }
+    setTimeout(() => {
+        document.getElementById("SwBt").style.backgroundColor = "#d9d9d9";
+        document.getElementById("swtchI").src = "../switch.png";
+    }, 100);
 }

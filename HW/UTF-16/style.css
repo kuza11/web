@@ -138,16 +138,14 @@ textarea:focus {
     grid-column-end: ci3;
     grid-row-start: ri3;
     grid-row-end: ri4;
-    grid-template-columns: [cii1] calc(50% - 6rem) [cii2] 14rem [cii3] calc(25% - 8rem) [cii4] 6rem [cii5] calc(25% - 8rem) [end];
+    grid-template-columns: [cii1] calc(50% - 8rem) [cii2] 16rem [cii3] calc(25% - 7rem) [cii4] 6rem [cii5] calc(25% - 7rem) [end];
 }
 
 #buttnCont {
-    display: flex;
+    display: grid;
     grid-column-start: cii2;
     grid-column-end: cii3;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    grid-template-columns: [ciii1] calc(50% - 2rem) [ciii2] 4rem [ciii3] calc(50% - 2rem) [end];
 
 }
 
@@ -158,7 +156,25 @@ textarea:focus {
     font-family: sans-serif;
 }
 
+#btnTL {
+    margin-right: 8%;
+    align-self: center;
+    justify-self: right;
+    grid-column-start: ciii1;
+    grid-column-end: ciii2;
+}
+
+#btnTR {
+    margin-left: 8%;
+    align-self: center;
+    justify-self: left;
+    grid-column-start: ciii3;
+    grid-column-end: ciii4;
+}
+
 button {
+    grid-column-start: ciii2;
+    grid-column-end: ciii3;
     padding: 0;
     border: none;
     background-color: #d9d9d9;
