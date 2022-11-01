@@ -11,7 +11,7 @@ body {
 #container {
     display: grid;
     grid-template-columns: [c1] 8rem [split] 8rem [c2] auto [end];
-    grid-template-rows: [r1] 8rem [r2] calc(20vh - 8rem) [r3] 60vh [r4] calc(20vh - 8rem) [r5] 8rem [end];
+    grid-template-rows: [r1] 8rem [r2] calc(15vh - 7rem) [r3] 70vh [r4] calc(15vh - 7rem) [r5] 6rem [end];
 }
 
 #left {
@@ -249,7 +249,7 @@ footer {
 
 .ftrtxt {
     margin: 0;
-    padding-top: 1.8rem;
+    padding-top: 1rem;
     display: flex;
     justify-content: center;
 }
