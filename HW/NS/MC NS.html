@@ -41,17 +41,17 @@
     </nav>
     <div id="cont">
         <div id="NSs">
-            <input id="NSL" placeholder="Set numeral system (2-36)" maxlength="2">
-            <input id="NSR" placeholder="Set numeral system (2-36)" maxlength="2">
+            <input id="NSL" placeholder="Set numeral system (2-36)" maxlength="2" onchange="nsSet('L')">
+            <input id="NSR" placeholder="Set numeral system (2-36)" maxlength="2" onchange="nsSet('R')">
         </div>
-        <textarea id="textA" placeholder="Input dec numbers seperated by space"></textarea>
+        <textarea id="textA" placeholder="Input numbers seperated by space"></textarea>
         <div id="contIn">
             <div id="buttnCont">
-                <p id="btnTL" class="btnT">DEC</p>
+                <p id="btnTL" class="btnT"></p>
                 <button type="button" name="bttnC" onclick="conversion()">
                     <img id="CIco" src="../convert-icon.png" alt="convIco" width="64" height="64">
                 </button>
-                <p id="btnTR" class="btnT">UTF-16</p>
+                <p id="btnTR" class="btnT"></p>
             </div>
             <div id="switch">
                 <button id="SwBt" type="button" name="bttnS" onclick="swtch()">

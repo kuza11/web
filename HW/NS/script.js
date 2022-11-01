@@ -12,24 +12,19 @@ setInterval(() => {
 function conversion() {
     document.getElementById("CIco").src = "../convert-icon-dark.png";
     document.getElementById("outputT").innerHTML = "";
-    if (!switched) {
-        try {
-            document.getElementById("textA").value.trim().split(" ").filter(e => e != "").forEach(e => {
-                e.trim().split("").forEach(num => {
-                    if (Number.isNaN(parseInt(num))) throw "NaN";
-                });
-                e = parseInt(e.trim());
-                if (Number.isNaN(e)) throw "invalid";
-                document.getElementById("outputT").innerHTML += String.fromCharCode(e);
-            
+    let val = document.getElementById("NSL").value;
+    try {
+        document.getElementById("textA").value.trim().split(" ").filter(e => e != "").forEach(e => {
+            e.trim().split("").forEach(num => {
+                if (Number.isNaN(parseInt(num, val))) throw "NaN";
             });
-        } catch{
-            return document.getElementById("outputT").innerHTML = "Invalid input!";
-        }
-    } else {
-        document.getElementById("textA").value.split("").forEach(e => {
-            document.getElementById("outputT").innerHTML += " " + e.charCodeAt(0);
+            e = parseInt(e.trim(), val);
+            if (Number.isNaN(e)) throw "invalid";
+            document.getElementById("outputT").innerHTML += " " + e.toString(parseInt(document.getElementById("NSR").value));
+        
         });
+    } catch{
+        return document.getElementById("outputT").innerHTML = "Invalid input!";
     }
     setTimeout(() => {
         document.getElementById("CIco").src = "../convert-icon.png"
@@ -40,26 +35,37 @@ function swtch() {
     document.getElementById("SwBt").style.backgroundColor = "#c5c5c5";
     document.getElementById("swtchI").src = "../switch-dark.png";
     if (!switched) {
-        document.getElementById("textA").placeholder = "Input text";
         let cont = document.getElementById("textA").value;
         document.getElementById("textA").value = document.getElementById("outputT").innerText;
         document.getElementById("outputT").innerHTML = cont;
-        document.getElementById("btnTL").innerHTML = "UTF-16";
-        document.getElementById("btnTR").innerHTML = "DEC";
+        document.getElementById("btnTL").innerHTML = document.getElementById(`NSR`).value;
+        document.getElementById("btnTR").innerHTML = document.getElementById(`NSL`).value;
+        document.getElementById(`NSR`).value = document.getElementById("btnTR").innerHTML;
+        document.getElementById(`NSL`).value = document.getElementById("btnTL").innerHTML;
         switched = true;
 
     } else {
         document.getElementById("SwBt").style.backgroundColor = "#c5c5c5";
-        document.getElementById("textA").placeholder = "Input dec numbers seperated by space";
         let cont = document.getElementById("textA").value;
         document.getElementById("textA").value = document.getElementById("outputT").innerText;
         document.getElementById("outputT").innerHTML = cont;
-        document.getElementById("btnTL").innerHTML = "DEC";
-        document.getElementById("btnTR").innerHTML = "UTF-16";
+        document.getElementById("btnTL").innerHTML = document.getElementById(`NSR`).value;
+        document.getElementById("btnTR").innerHTML = document.getElementById(`NSL`).value;
+        document.getElementById(`NSR`).value = document.getElementById("btnTR").innerHTML;
+        document.getElementById(`NSL`).value = document.getElementById("btnTL").innerHTML;
         switched = false;
     }
     setTimeout(() => {
         document.getElementById("SwBt").style.backgroundColor = "#d9d9d9";
         document.getElementById("swtchI").src = "../switch.png";
     }, 100);
+}
+
+function nsSet(param){
+    let val = document.getElementById(`NS${param}`);
+    let num = parseInt(val.value);
+    if(Number.isNaN(parseInt(val.value.split("")[0])) || (Number.isNaN(parseInt(val.value.split("")[1])) && val.value.length > 1) || num == 1 || num > 36)  val.value = "";
+    else{
+        document.getElementById(`btnT${param}`).innerHTML = val.value;
+    }
 }

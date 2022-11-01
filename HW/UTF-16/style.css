@@ -110,8 +110,6 @@ a:hover {
     grid-template-rows: [ri1] calc(7% - 1rem) [ri2] calc(42% - 1rem) [ri3] 1% [sp1] 4rem [sp2] 1% [ri4] calc(42% - 1rem) [ri5] calc(7% - 1rem) [end];
 }
 
-
-
 textarea {
     grid-column-start: ci2;
     grid-column-end: ci3;

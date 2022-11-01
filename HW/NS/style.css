@@ -107,7 +107,7 @@ a:hover {
     background-color: #d9d9d9;
     overflow: auto;
     grid-template-columns: [ci1] 5% [ci2] auto [ci3] 5% [end];
-    grid-template-rows: [ri1] calc(7% - 2rem) [NSs1] 3rem [NSs2] calc(7% - 2rem) [ri2] calc(38.5% - 1rem) [ri3] 1% [sp1] 4rem [sp2] 1% [ri4] calc(38.5% - 1rem) [ri5] calc(7% - 1rem) [end];
+    grid-template-rows: [ri1] calc(7% - 2rem) [NSs1] 4rem [NSs2] calc(7% - 1rem) [ri2] calc(38.5% - 2rem) [ri3] 1% [sp1] 4rem [sp2] 1% [ri4] calc(38.5% - 2rem) [ri5] calc(7% - 1rem) [end];
 }
 
 #NSs{
@@ -120,6 +120,12 @@ a:hover {
 }
 input{
     border: 5px solid #7b7b7b;
+    font-size: 20px;
+    font-family: sans-serif;
+    text-align: center;
+}
+input::placeholder{
+    color: #b3b3b3;
 }
 #NSR{
     grid-column-start: NSi1;
@@ -221,6 +227,7 @@ button {
 }
 
 #output {
+    line-break: anywhere;
     grid-column-start: ci2;
     grid-column-end: ci3;
     grid-row-start: ri4;
