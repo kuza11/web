@@ -107,7 +107,7 @@ a:hover {
     background-color: #d9d9d9;
     overflow: auto;
     grid-template-columns: [ci1] 5% [ci2] auto [ci3] 5% [end];
-    grid-template-rows: [ri1] calc(7% - 1rem) [ri2] calc(43% - 1rem) [ri3] 4rem [ri4] calc(43% - 1rem) [ri5] calc(7% - 1rem) [end];
+    grid-template-rows: [ri1] calc(7% - 1rem) [ri2] calc(42% - 1rem) [ri3] 1% [sp1] 4rem [sp2] 1% [ri4] calc(42% - 1rem) [ri5] calc(7% - 1rem) [end];
 }
 
 

@@ -107,11 +107,28 @@ a:hover {
     background-color: #d9d9d9;
     overflow: auto;
     grid-template-columns: [ci1] 5% [ci2] auto [ci3] 5% [end];
-    grid-template-rows: [ri1] calc(7% - 1rem) [ri2] calc(42% - 1rem) [ri3] 1% [sp1] 4rem [sp2] 1% [ri4] calc(42% - 1rem) [ri5] calc(7% - 1rem) [end];
+    grid-template-rows: [ri1] calc(7% - 2rem) [NSs1] 3rem [NSs2] calc(7% - 2rem) [ri2] calc(38.5% - 1rem) [ri3] 1% [sp1] 4rem [sp2] 1% [ri4] calc(38.5% - 1rem) [ri5] calc(7% - 1rem) [end];
 }
 
-
-
+#NSs{
+    display: grid;
+    grid-column-start: ci2;
+    grid-column-end: ci3;
+    grid-row-start: NSs1;
+    grid-row-end: NSs2;
+    grid-template-columns: [NSi1] 48% [NSi2] 4% [NSi3] 48% [end];
+}
+input{
+    border: 5px solid #7b7b7b;
+}
+#NSR{
+    grid-column-start: NSi1;
+    grid-column-end: NSi2;
+}
+#NSR{
+    grid-column-start: NSi3;
+    grid-column-end: end;
+}
 textarea {
     grid-column-start: ci2;
     grid-column-end: ci3;
@@ -146,6 +163,7 @@ textarea:focus {
     grid-column-start: cii2;
     grid-column-end: cii3;
     grid-template-columns: [ciii1] calc(50% - 2rem) [ciii2] 4rem [ciii3] calc(50% - 2rem) [end];
+
 }
 
 .btnT {
@@ -172,6 +190,8 @@ textarea:focus {
 }
 
 button {
+    grid-column-start: ciii2;
+    grid-column-end: ciii3;
     padding: 0;
     border: none;
     background-color: #d9d9d9;
